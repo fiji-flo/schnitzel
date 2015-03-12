@@ -1,0 +1,14 @@
+[
+  {
+    "code": "codeLevel1"
+    , "description": "Hier sollte eine Aufgabe stehen"
+    , "uploadName": "Dateiprefix für den Upload"
+    , "next": "Beschreibung für den nächsten Level"
+  }
+  , {
+    "code": "codeLevel2"
+    , "description": "Hier sollte eine Aufgabe stehen"
+    , "uploadName": "Dateiprefix für den Upload"
+    , "next": "Beschreibung für den nächsten Level"
+  }
+]
