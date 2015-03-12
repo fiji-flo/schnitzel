@@ -2,8 +2,6 @@ window.onload = function () {
   "use strict";
 
   var group = window.location.hash.slice(1);
-  var container;
-  //var BASEURL = "http://192.168.178.75:8080";
   var BASEURL = "..";
 
   function eid(id) {
