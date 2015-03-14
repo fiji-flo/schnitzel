@@ -36,7 +36,7 @@
 
   Level.prototype.send = function () {
     return page(this.level
-                , this.code
+                , this.code.toLowerCase()
                 , this.description
                 , this.uploadName
                 , this.done ? this.next : ""
@@ -46,7 +46,7 @@
   function makeLevels(configs) {
     var levels = {};
     configs.forEach(function (config, idx) {
-      levels[config.code] = new Level(config, idx);
+      levels[config.code.toLowerCase()] = new Level(config, idx);
     });
     return levels;
   }
@@ -57,6 +57,7 @@
   }
 
   Session.prototype.level = function (code) {
+    code = code.toLowerCase();
     if (code in this.levels) {
       return this.levels[code].send();
     } else {
