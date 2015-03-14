@@ -2,6 +2,9 @@ window.onload = function () {
   "use strict";
 
   var group = window.location.hash.slice(1);
+  window.onhashchange = function () {
+    group = window.location.hash.slice(1);
+  };
   var BASEURL = "..";
 
   function eid(id) {
