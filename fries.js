@@ -92,14 +92,14 @@
         if (req.files) {
           var file = req.files.file;
           console.log("gotcha");
-          var newPath = 'upload/' + [group
+          var newPath = 'upload/' + [level.uploadName
+                                     , group
                                      , num
                                      , (new Date()).getTime()
                                      , file.name
                                     ].join("-");
           var data = fs.readFileSync(req.files.file.path);
           fs.writeFileSync(newPath, data);
-          level.uploadName = newPath;
           level.done = true;
           res.send(session.level(code));
         }
